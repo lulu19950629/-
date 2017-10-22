@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车和结算页</title>
+    <link href="./style/reset.css" rel="stylesheet" type="text/css" />
+    <link href="./style/main.css" rel="stylesheet" type="text/css" />
+    <!--[if IE 6]>
+<script type="text/javascript" src="js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script type="text/javascript" src="js/ie6Fixpng.js"></script>
+<![endif]-->
+</head>
+
+<body>
+    <div class="headerBar">
+        <div class="topBar">
+            <div class="comWidth">
+                <div class="leftArea fl">
+                    <a href="#" class="collection">收藏慕课</a>
+                </div>
+                <div class="rightArea fr">
+                    欢迎来到慕课网！<a href="#">[登录]</a><a href="#">[免费注册]</a>
+                </div>
+            </div>
+        </div>
+        <div class="logoBar">
+            <div class="comWidth clearfix">
+                <div class="logo fl">
+                    <a href="#"><img src="./images/logo.png" alt="慕课网"/></a>
+                </div>
+                <div class="step fr">
+                    <img src="./images/购物车头部.png" alt="step">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hr_20"></div>
+    <div class="pubBox comWidth">
+        <div class="headline">收货方式</div>
+        <table class="pubBox_cont">
+            <tbody>
+                <tr>
+                    <td><span>*</span>选择地区：</td>
+                    <td><div class="selectBox">
+                            <h5>北京市 海淀区 五环内</h5><span></span>
+                            <ul class="select_Show">
+                                <li>五道口</li>
+                                <li>三里屯</li>
+                                <li>王府井</li>
+                            </ul>
+                    </div></td>
+                </tr>
+                <tr>
+                    <td><span>*</span>详细地址：</td>
+                    <td><input type="text" id="clearAddress" value="最多输入26个汉字"/></td>
+                </tr>
+                <tr>
+                    <td><span>*</span>收货人：</td>
+                    <td><input type="text" id="receiver" value="最多10个汉字"/></td>
+                </tr>
+                <tr>
+                    <td><span>*</span>手机：</td>
+                    <td><input type="text" id="phone" value="如13452525625"/> 或固定电话： <input type="text" id="area" value="区号"/> - <input type="text" id="telephone" value="电话号码"/> - <input type="text" id="branch" value="分机号（可选）"/></td>
+                </tr>
+                <tr>
+                    <td></td><td><a href="#" class="recheck">确认收货地址</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="hr_20"></div>
+    <div class="pubBox comWidth">
+        <div class="headline">支付方式</div>
+        <table class="pubBox_cont">
+            <tbody>
+                <tr>
+                    <td><input type="radio" id="wechat"/><label for="wechat">微信支付</label></td>
+                    <td><span class="wechatIcon"></span>用微信扫一扫就能支付！</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" id="afterPay"/><label for="afterPay">货到付款</label></td>
+                    <td>送货上门后再付款，使用现金或刷银行卡。</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="hr_20"></div>
+    <div class="pubBox comWidth">
+        <div class="headline">发票信息</div>
+        <table class="pubBox_cont">
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" id="needTicket"/><label for="needTicket">需要发票</label></td>
+                </tr>
+                <tr>
+                    <td><span>*</span>发票类型：</td>
+                    <td><select name="ticketType" id="ticketType">
+                        <option value="business ticket" selected="selected">商业零售发票</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td><span>*</span>发票抬头：</td>
+                    <td><select name="ticketTop" id="ticketTop">
+                        <option value="personal" selected="selected">个人</option>
+                    </select><input type="text" id="otherTicket_Top" value="阿斯顿"/></td>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td></td><td><a href="#" class="save">保存</a></td>
+                    <td><a href="#" class="escape">取消</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="hr_20"></div>
+    <div class="pubBox comWidth">
+        <div class="headline">送货清单<a href="#" class="returnShopCar">返回购物车修改</a></div>
+        <table class="pubBox_cont identify">
+            <tbody>
+                <tr>
+                    <td><ul class="clearfix">
+                        <li class="productName">商品名称</li>
+                        <li>单价</li>
+                        <li>返现</li>
+                        <li>数量</li>
+                        <li>小计</li>
+                    </ul></td>
+                </tr>
+                <tr>
+                    <td><ul class="clearfix">
+                        <li class="productName">
+                            <div class="sendItem fl">
+                    <div class="sendItem_Img fl">
+                        <img src="./images/sendItem_Img.jpg" alt="sendItem_Img">
+                    </div>
+                    <div class="sendItem_Text fl">
+                        <p class="sendItem_Info">Hisense 海信 BCD-202D 202升 三门冰箱（银色）<p>
+                        <p>[赠品]保鲜盒.抽真空保鲜盒-海信水洗赠品</p>
+                    </div>
+                        </li>
+                        <li>&yen;1459.00</li>
+                        <li>&yen;0.00</li>
+                        <li><p class="sendItem_Amount">1</p><p>1</p></li>
+                        <li><span>&yen;1459.00</span></li>
+                    </ul></td>
+                </tr>
+                <tr>
+                    <td><a href="#" class="tellUs">若您对包裹有特殊要求，请在此留言</a></td>
+                </tr>
+                <tr>
+                    <td><p class="sorry"><i></i>抱歉，以下商品暂时不能购买，已帮您自动在本次结算中剔除并扣减对应金额，您可以先购买其它商品：）</p></td>
+                </tr>
+                <tr>
+                    <td><div class="noGoods fl">
+                    <div class="noGoods_Img fl">
+                        <img src="./images/noGoods_Img.jpg" alt="noGoods_Img">
+                    </div>
+                    <div class="noGoods_Text fl">
+                        <p>清风 欧院系列 清香型 100抽3...<p>
+                        <p>数量：1件</p>
+                        <p>&yen;4.90<span>（无货）</span></p>
+                    </div>
+                </div></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="hr_20"></div>
+    <div class="pubBox comWidth">
+        <div class="headline">订单结算</div>
+        <div class="pubBox_cont clearfix">
+            <div class="purchase fr">
+                <p class="totalCost">总计<strong>&yen;1459.00</strong></p>
+                <a href="#" class="confirmBtn">提交订单</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p><a href="#">慕课简介</a><span>|</span><a href="#">慕课公告</a><span>|</span> <a href="#">招纳贤士</a><span>|</span> <a href="#">联系我们</a><span>|</span>客服热线：400-675-1234</p>
+        <p>Copyright &copy; 2006 - 2014 慕课版权所有&nbsp;&nbsp;&nbsp;京ICP备09037834号&nbsp;&nbsp;&nbsp;京ICP证B1034-8373号&nbsp;&nbsp;&nbsp;某市公安局XX分局备案编号：123456789123</p>
+        <p><img src="./images/footer_logo.jpg" alt="footer_logo"><img src="./images/footer_logo.jpg" alt="footer_logo">
+            <img src="./images/footer_logo.jpg" alt="footer_logo"><img src="./images/footer_logo.jpg" alt="footer_logo"></p>
+    </div>
+</body>
+
+</html>
